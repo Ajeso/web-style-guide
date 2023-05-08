@@ -1,10 +1,10 @@
-@use "../base";
+@use "./base";
 @use "./utilities";
 @use "./component";
 
 * {
   font-family: base.$font-stack;
-  color: #777;
+  color: $white;
   box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@ a {
 }
 
 .link {
-  color: #51ddfc;
+  color: utilities.$sky-blue;
   font-weight: 700;
 }
 
