@@ -1,6 +1,6 @@
-@use "./base";
-@use "./utilities";
-@use "./component";
+@use "./base" as b;
+@use "./utilities" as u;
+@use "./component" as c;
 
 * {
   font-family: base.$font-stack;
