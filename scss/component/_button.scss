@@ -1,3 +1,5 @@
+@use "../utilities/variables" as variables;
+
 .btn {
   margin-top: 15px;
   width: 100%;
@@ -9,7 +11,7 @@
 }
 
 .default {
-  background-color: utilities.$sky-blue;
+  background-color: variables.$sky-blue;
 }
 
 .error {

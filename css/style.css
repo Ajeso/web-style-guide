@@ -1,17 +1,19 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use "../base";
- *   | ^^^^^^^^^^^^^^
- *   '
- *   scss/style.scss 1:1  root stylesheet */
+/* Error: Undefined variable.
+ *    ,
+ * 18 |   color: $white;
+ *    |          ^^^^^^
+ *    '
+ *   scss/component/_navigation.scss 18:10  @forward
+ *   scss/component/_index.scss 4:1         @use
+ *   scss/style.scss 3:1                    root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-    "Droid Sans Mono", monospace, monospace;
+      "Droid Sans Mono", monospace, monospace;
   white-space: pre;
   display: block;
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Can\'t find stylesheet to import.\a   \2577 \a 1 \2502  @use "../base";\a   \2502  ^^^^^^^^^^^^^^\a   \2575 \a   scss/style.scss 1:1  root stylesheet';
+  content: "Error: Undefined variable.\a    \2577 \a 18 \2502    color: $white;\a    \2502           ^^^^^^\a    \2575 \a   scss/component/_navigation.scss 18:10  @forward\a   scss/component/_index.scss 4:1         @use\a   scss/style.scss 3:1                    root stylesheet";
 }

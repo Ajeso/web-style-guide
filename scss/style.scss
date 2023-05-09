@@ -1,10 +1,10 @@
-@use "./base" as b;
-@use "./utilities" as u;
+@use "./base" as base;
+@use "./utilities/variables" as variables;
 @use "./component" as c;
 
 * {
   font-family: base.$font-stack;
-  color: $white;
+  color: variables.$text-color;
   box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@ a {
 }
 
 .link {
-  color: utilities.$sky-blue;
+  color: variables.$sky-blue;
   font-weight: 700;
 }
 
@@ -172,7 +172,4 @@ a {
     margin-left: initial;
     margin-right: initial;
   }
-}
-.card {
-  background-color: utilities.$warning-red;
 }
