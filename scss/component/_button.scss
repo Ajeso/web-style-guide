@@ -1,31 +1,41 @@
 @use "../utilities/variables" as variables;
+@use "../utilities/mixins" as mixin;
 
 .btn {
   margin-top: 15px;
   width: 100%;
-  color: #fff;
+  color: variables.$white;
   border: none;
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
-}
 
-.default {
-  background-color: variables.$sky-blue;
-}
+  @include mixin.mq {
+    padding: 10px 30px;
 
-.error {
-  background-color: #e4757a;
-}
+    & + .btn {
+      margin-left: 10px;
+    }
+  }
 
-.info {
-  background-color: #927bc1;
-}
+  &.default {
+    background-color: variables.$sky-blue;
+  }
 
-.success {
-  background-color: #63cc82;
-}
+  &.error {
+    background-color: #e4757a;
+    @include mixin.bg-color(variables.$color-btn-err);
+  }
 
-.warning {
-  background-color: #fd7856;
+  &.info {
+    background-color: #927bc1;
+  }
+
+  &.success {
+    background-color: #63cc82;
+  }
+
+  &.warning {
+    background-color: #fd7856;
+  }
 }

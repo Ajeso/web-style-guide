@@ -1,4 +1,47 @@
+@use "../utilities/variables" as variables;
+
 $font-bold: 300;
 $font-bolder: 700;
 
 $font-stack: "Lato", sans-serif;
+
+* {
+  font-family: $font-stack;
+  color: variables.$primary-color;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.45em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.headline {
+  &-primary {
+    color: variables.$medium-turquoise;
+    margin-left: 10px;
+  }
+
+  &-secondary {
+    font-weight: 300;
+    color: variables.$primary-color;
+  }
+}
+
+.link {
+  color: variables.$sky-blue;
+  font-weight: 700;
+}
+
+.blockquote {
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 8px solid variables.$medium-turquoise;
+  border-radius: 5px;
+}

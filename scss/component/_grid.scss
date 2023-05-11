@@ -1,13 +1,33 @@
 @use "../utilities/variables" as variables;
+@use "../utilities/mixins" as mixin;
 
 .container {
   padding: 0 10px;
+
+  @include mixin.mq {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include mixin.mq {
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .row {
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
+
+  @include mixin.mq {
+    flex-direction: row;
+  }
 }
 
 [class^="col"] {
@@ -16,56 +36,116 @@
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
+
+  @include mixin.mq {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+    & + [class^="col"] {
+      margin-left: 10px;
+    }
+  }
 }
 
-.theme.col-1 {
-  background-color: #927bc1;
-}
+.theme {
+  &.col-1 {
+    background-color: #927bc1;
+  }
 
-.theme.col-2 {
-  background-color: #fd7856;
-}
+  &.col-2 {
+    background-color: #fd7856;
+  }
 
-.theme.col-3 {
-  background-color: #deb2ee;
-}
+  &.col-3 {
+    background-color: #deb2ee;
+  }
 
-.theme.col-4 {
-  background-color: #7ee6fd;
-}
+  &.col-4 {
+    background-color: #7ee6fd;
+  }
 
-.theme.col-5 {
-  background-color: #88d9a0;
-}
+  &.col-5 {
+    background-color: #88d9a0;
+  }
 
-.theme.col-6 {
-  background-color: #4da2bb;
-}
+  &.col-6 {
+    background-color: #4da2bb;
+  }
 
-.theme.col-7 {
-  background-color: #ec9fa3;
-}
+  &.col-7 {
+    background-color: #ec9fa3;
+  }
 
-.theme.col-8 {
-  background-color: #fd9f85;
-}
+  &.col-8 {
+    background-color: #fd9f85;
+  }
 
-.theme.col-9 {
-  background-color: #e4757a;
-}
+  &.col-9 {
+    background-color: #e4757a;
+  }
 
-.theme.col-10 {
-  background-color: #63cc82;
-}
+  &.col-10 {
+    background-color: #63cc82;
+  }
 
-.theme.col-11 {
-  background-color: variables.$sky-blue;
-}
+  &.col-11 {
+    background-color: variables.$sky-blue;
+  }
 
-.theme.col-12 {
-  background-color: #80e8d1;
+  &.col-12 {
+    background-color: #80e8d1;
+  }
 }
+@include mixin.mq {
+  .col-1 {
+    flex-basis: 8.33%;
+  }
 
+  .col-2 {
+    flex-basis: 16.67%;
+  }
+
+  .col-3 {
+    flex-basis: 25%;
+  }
+
+  .col-4 {
+    flex-basis: 33.33%;
+  }
+
+  .col-5 {
+    flex-basis: 41.67%;
+  }
+
+  .col-6 {
+    flex-basis: 50%;
+  }
+
+  .col-7 {
+    flex-basis: 58.33%;
+  }
+
+  .col-8 {
+    flex-basis: 66.67%;
+  }
+
+  .col-9 {
+    flex-basis: 75%;
+  }
+
+  .col-10 {
+    flex-basis: 83.33%;
+  }
+
+  .col-11 {
+    flex-basis: 91.67%;
+  }
+
+  .col-12 {
+    flex-basis: 100%;
+  }
+}
 .card {
   flex-basis: 100%;
 }

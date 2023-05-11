@@ -1,20 +1,33 @@
+@use "../utilities/variables" as variables;
+@use "../utilities/mixins" as mixin;
+
 .nav {
   padding-left: 0;
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
 
-  .nav-link {
+  @include mixin.mq {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-link {
     text-align: center;
     border-radius: 5px;
     padding: 10px 0;
     display: block;
     width: 100%;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  }
-}
 
-.nav-link:hover {
-  color: $white;
-  background-color: $medium-turquoises;
+    @include mixin.mq {
+      flex-basis: 100px;
+    }
+
+    &:hover {
+      color: variables.$white;
+      background-color: variables.$medium-turquoise;
+    }
+  }
 }
