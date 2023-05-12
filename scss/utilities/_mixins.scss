@@ -1,6 +1,5 @@
-@use "../utilities/variables" as variables;
 @mixin mq {
-  @media (min-width: variables.$break-m) {
+  @media (min-width: 768px) {
     @content;
   }
 }

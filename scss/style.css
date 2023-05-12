@@ -1,9 +1,6 @@
 /*---------------------------------------- 
                   COLORS
 -----------------------------------------*/
-/*--------------------------------------
-           MEDIA QUERIES
----------------------------------------*/
 * {
   font-family: "Lato", sans-serif;
   color: #777;
@@ -372,6 +369,9 @@ template {
 .btn.default {
   background-color: #51ddfc;
 }
+.btn.default:hover {
+  background-color: #9cecfd;
+}
 .btn.error {
   background-color: #e4757a;
 }
@@ -381,11 +381,20 @@ template {
 .btn.info {
   background-color: #927bc1;
 }
+.btn.info:hover {
+  background-color: #bdafd9;
+}
 .btn.success {
   background-color: #63cc82;
 }
+.btn.success:hover {
+  background-color: #9ddfb0;
+}
 .btn.warning {
   background-color: #fd7856;
+}
+.btn.warning:hover {
+  background-color: #feb4a2;
 }
 
 .container {
@@ -468,7 +477,7 @@ template {
   background-color: #63cc82;
 }
 .theme.col-11 {
-  background-color: #51ddfc;
+  background-color: vari;
 }
 .theme.col-12 {
   background-color: #80e8d1;
@@ -544,13 +553,6 @@ template {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) {
-  .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-}
 .nav-link {
   text-align: center;
   border-radius: 5px;
@@ -567,4 +569,12 @@ template {
 .nav-link:hover {
   color: #fff;
   background-color: #58e1c1;
+}
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: tomato;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -19,23 +19,27 @@
   }
 
   &.default {
-    background-color: variables.$sky-blue;
+    background-color: variables.$color-btn-def;
+    @include mixin.bg-color(variables.$color-btn-def);
   }
 
   &.error {
-    background-color: #e4757a;
+    background-color: variables.$color-btn-err;
     @include mixin.bg-color(variables.$color-btn-err);
   }
 
   &.info {
-    background-color: #927bc1;
+    background-color: variables.$color-btn-info;
+    @include mixin.bg-color(variables.$color-btn-info);
   }
 
   &.success {
-    background-color: #63cc82;
+    background-color: variables.$color-btn-succ;
+    @include mixin.bg-color(variables.$color-btn-succ);
   }
 
   &.warning {
-    background-color: #fd7856;
+    background-color: variables.$color-btn-warn;
+    @include mixin.bg-color(variables.$color-btn-warn);
   }
 }
