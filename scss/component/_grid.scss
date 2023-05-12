@@ -50,11 +50,11 @@
 
 .theme {
   &.col-1 {
-    background-color: #927bc1;
+    background-color: variables.$color-btn-info;
   }
 
   &.col-2 {
-    background-color: #fd7856;
+    background-color: variables.$color-btn-warn;
   }
 
   &.col-3 {
@@ -82,15 +82,15 @@
   }
 
   &.col-9 {
-    background-color: #e4757a;
+    background-color: variables.$color-btn-err;
   }
 
   &.col-10 {
-    background-color: #63cc82;
+    background-color: variables.$color-btn-succ;
   }
 
   &.col-11 {
-    background-color: vari;
+    background-color: variables.$color-btn-def;
   }
 
   &.col-12 {
